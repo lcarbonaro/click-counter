@@ -8,6 +8,7 @@
 <body>
     <button id="btnInc">Increment</button>
     <p id="showCounter"></p>
+    <button id="btnDec">Decrement</button>
 
 
     <script>
@@ -15,14 +16,22 @@
 
         var btn = document.getElementById('btnInc');
         var p = document.getElementById('showCounter');
+        var btnDec = document.getElementById('btnDec');
 
 
         btn.addEventListener('click', incrementCounter);
+        btnDec.addEventListener('click', decrementCounter);
 
 
         function incrementCounter() {
             //console.log('hello');
             counter = counter + 1; // counter++
+            p.textContent = counter;
+        }
+
+        function decrementCounter() {
+            //console.log('hello');
+            counter = counter - 1; // counter--
             p.textContent = counter;
         }
     </script>
